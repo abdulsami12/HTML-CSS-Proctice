@@ -1,0 +1,42 @@
+.text-animation {
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.word {
+    display: inline-block;
+    opacity: 0;
+    transform: translateX(-10px);
+    animation: word-animation 2s forwards;
+}
+
+.char {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(100%);
+    animation: char-animation 4s forwards;
+}
+
+@keyframes word-animation {
+    0% {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes char-animation {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
