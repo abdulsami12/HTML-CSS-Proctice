@@ -1,0 +1,251 @@
+body{
+    margin: 0;
+    background:#110a14;
+    height: 100vh;
+    /* display: flex;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    font-family:  Helvetica, sans-serif;
+padding: 2rem; */
+}
+
+.card{
+    width: 20rem;
+    min-height: 24rem;
+    background: linear-gradient(0deg, #ad5389, #3c1053);
+    /* border-radius: 3rem; */
+    position: relative;
+    box-sizing: border-box;
+    padding:  2rem;
+    color: #fff;
+    margin: 3rem 1rem;
+
+}
+
+.card::before,
+.card::after{
+    content: '';
+    position: absolute;
+    background: #ad5389;
+    z-index: -1;
+}
+
+.card::before{
+    bottom: -4em;
+    left: 0;
+    width: 65%;
+    height: 7em;
+    border-bottom-left-radius: inherit;
+}
+
+.card::after{
+bottom: -2.6em;
+right: 1.7em;
+width: 40%;
+height: 9em;
+transform: rotate(-30deg);
+border-radius: inherit;
+}
+
+
+.card p {
+    line-height: 25px;
+    font-size: 0.9em;
+
+}
+
+.card a {
+    position: absolute;
+    bottom: -1.5em;
+    left: 2rem;
+    text-decoration: none;
+    color: #3c1053;
+    background: #fff;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    padding: 0.7em  1.3em;
+    border-radius: 3em;
+    transition: 0.3s;
+
+}
+
+.card a:hover{
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5);
+    transform: translateY(-8px);
+}
+
+
+
+
+.contect{
+    position: absolute;
+    background-color: red;
+    top: 10;
+    left: 0;
+    width: 41%;
+    transform: rotate(-30deg);
+    height: 30px;
+}
+
+
+.left-content{
+    position: absolute;
+    background-color: red;
+    top: 0;
+    right: 0;
+    width:63.9%;
+  
+    height: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.card1{
+    width: 320px;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+
+    border:8px solid white ;
+}
+
+.card-image{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+border-radius: 15px;
+} 
+
+
+
+.card-body{
+   width: 77%;
+   height: 40%;
+   top: 0;
+   left: 100%;
+   position: absolute;
+   background: #0000003a ;             /*#0000003a */
+   backdrop-filter:blur(5px);
+   border-radius: 15px;
+   color: white;
+   padding: 38px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+transition: .5s ease-out;
+-webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+clip-path: polygon(30% 0%, 70% 0%, 100% 0%, 100% 70%, 70% 100%, 0% 100%, 0% 70%, 0% 30%);
+}
+
+
+.card1:hover .card-body{
+    left: 0;
+}
+
+.card1:hover .card-body1{
+    right: 0;
+}
+
+.card-title{
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 500;
+
+}
+
+.card-sub-title{
+text-transform: capitalize;
+font-size: 14px;
+font-weight: 300;
+}
+
+.card-info{
+    font-size: 16px;
+    line-height: 25px;
+    margin:40px  0;
+    font-weight: 400;
+}
+
+.card-btn{
+color:#1f3d47;
+background: #8fabba;
+padding: 10px 20px;
+width: 120px;
+border-radius: 5px;
+text-transform: capitalize;
+border: none;
+outline: none;
+font-weight: 500;
+cursor: pointer; 
+}
+
+
+.text-animation {
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+.card1:hover .word {
+    display: inline-block;
+    opacity: 0;
+    transform: translateX(-10px);
+    animation: word-animation 2s forwards;
+}
+
+.card1:hover  .char {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(100%);
+    animation: char-animation 4s forwards;
+}
+
+
+
+
+
+
+
+
+
+/* .card-shape{
+   width: 100%;
+    -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    clip-path: polygon(30% 0%, 70% 0%, 100% 0%, 100% 70%, 70% 100%, 0% 100%, 0% 70%, 0% 30%);
+    background: red;
+
+} */
+
+@keyframes word-animation {
+    0% {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes char-animation {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

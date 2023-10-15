@@ -1,0 +1,74 @@
+body{
+    margin: 0;
+    background:#110a14;
+    height: 100vh;
+    display: flex;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    font-family:  Helvetica, sans-serif;
+padding: 2rem;
+}
+
+.card{
+    width: 20rem;
+    min-height: 18rem;
+    background: linear-gradient(0deg, #ad5389, #3c1053);
+    border-radius: 3rem;
+    position: relative;
+    box-sizing: border-box;
+    padding: 2rem;
+    color: #fff;
+    margin: 3rem 1rem;
+}
+
+.card::before,
+.card::after{
+    content: '';
+    position: absolute;
+    background: #ad5389;
+    z-index: -1;
+}
+
+.card::before{
+    bottom: -4em;
+    left: 0;
+    width: 65%;
+    height: 7em;
+    border-bottom-left-radius: inherit;
+}
+
+.card::after{
+bottom: -2.46em;
+right: 0.3em;
+width: 59%;
+height: 9em;
+transform: rotate(-42deg);
+border-radius: inherit;
+}
+
+
+.card p {
+    line-height: 25px;
+    font-size: 0.9em;
+
+}
+
+.card a {
+    position: absolute;
+    bottom: -1.5em;
+    left: 2rem;
+    text-decoration: none;
+    color: #3c1053;
+    background: #fff;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    padding: 0.7em  1.3em;
+    border-radius: 3em;
+    transition: 0.3s;
+
+}
+
+.card a:hover{
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5);
+    transform: translateY(-8px);
+}
